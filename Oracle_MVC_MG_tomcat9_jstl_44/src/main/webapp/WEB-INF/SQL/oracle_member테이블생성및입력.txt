@@ -1,0 +1,17 @@
+create table oracle_member(
+ora_id VARCHAR2(10) NOT NULL PRIMARY KEY,
+ora_pw VARCHAR2(10) NOT NULL,
+ora_level VARCHAR2(10) NOT NULL,
+ora_name VARCHAR2(20) NOT NULL,
+ora_email VARCHAR2(80)
+); 
+insert into oracle_member values('id001','pw001','관리자','홍01','001@ksmart.or.kr');
+insert into oracle_member values('id002','pw002','판매자','홍02','002@ksmart.or.kr');
+insert into oracle_member values('id003','pw003','구매자','홍03','003@ksmart.or.kr');
+insert into oracle_member values('id004','pw004','구매자','홍04','004@ksmart.or.kr');
+insert into oracle_member values('id005','pw005','구매자','홍05','005@ksmart.or.kr');
+
+오라클 일반 사용자 계정 생성 및 접근권한 부여
+create user dev00id identified by dev00pw
+grant connect,resource to dev00id;
+--------------------------------
